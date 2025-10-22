@@ -1,0 +1,35 @@
+- ros_topic_name: "/joint_states"
+  gz_topic_name: "/world/empty/model/cartpole_balancer/joint_state"
+  ros_type_name: "sensor_msgs/msg/JointState"
+  gz_type_name: "gz.msgs.Model"
+  direction: GZ_TO_ROS
+
+- ros_topic_name: "/tf"
+  gz_topic_name: "/model/cartpole_balancer/pose"
+  ros_type_name: "tf2_msgs/msg/TFMessage"
+  gz_type_name: "gz.msgs.Pose_V"
+  direction: GZ_TO_ROS
+
+- ros_topic_name: "/cartpole_balancer/odometry"
+  gz_topic_name: "/model/cartpole_balancer/odometry"
+  ros_type_name: "nav_msgs/msg/Odometry"
+  gz_type_name: "gz.msgs.Odometry"
+  direction: GZ_TO_ROS
+
+- ros_topic_name: "/cartpole_balancer/cmd_vel"
+  gz_topic_name: "/model/cartpole_balancer/cmd_vel"
+  ros_type_name: "geometry_msgs/msg/Twist"
+  gz_type_name: "gz.msgs.Twist"
+  direction: ROS_TO_GZ
+
+- ros_topic_name: "/apply_force_and_torque"
+  gz_topic_name: "/world/empty/wrench/persistent"
+  ros_type_name: "ros_gz_interfaces/msg/EntityWrench"
+  gz_type_name: "gz.msgs.EntityWrench"
+  direction: ROS_TO_GZ
+
+- ros_topic_name: "/simulation/reset"
+  gz_topic_name: "/world/empty/control"
+  ros_type_name: "ros_gz_interfaces/msg/WorldReset"
+  gz_type_name: "gz.msgs.WorldControl"
+  direction: ROS_TO_GZ
